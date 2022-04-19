@@ -132,11 +132,9 @@ nav .icon{
 
 /* 產品類別 */
 .product{
+    /* border: 1px solid red; */
     padding-top: 150px;
     position: relative;
-    /* background-image: url(./pics/logo/background3.png);
-    background-size: 100px;
-    background-repeat: no-repeat; */
 }
 .product .bg{
     width: 30%;
@@ -151,33 +149,38 @@ nav .icon{
     display: flex;
     justify-content: space-between;
 }
-.product .container div{
-    /* border: 1px solid red; */
+.product .card{
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     width: 30%;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    border-radius: 50%;
 }
-.product .container img{
-    border-radius: 50%;
+.product .card img{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.bdcake{
-    margin-top: -50px;
+.product .container :nth-of-type(2){
+    /* border: 3px solid #000; */
+    /* margin-top: -50px; */
+    transform: translateY(-50px);
 }
-.product span{
+.product .card p{
     /* border: 1px solid red; */
     font-size: 26px;
     text-align: center;
     color: rgba(163, 183, 188, 1);
     background-color: rgba(83, 113, 147, .7);
-    border-radius: 0 0 124px 124px;
+    /* border-radius: 100% 0; */
+    line-height:30px;
     position: absolute;
-    width: 124px;
-    height: 62px;
-    bottom: 0px;
-    left: 0px;  
-}
-.bdcake span{
-    margin-bottom: 50px;
+    bottom: 0;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* 人氣熱賣 */
@@ -215,18 +218,17 @@ h2{
     bottom: 0;
     right: 0;
     left: 0;
-    height: 30%;
-    padding-top: 20px;
+    padding: 20px 0;
     color: rgba(163, 183, 188, 1);
 }
-.card{
+.hot .card{
     padding-top: 50px;
 }
 .hot .card img{
     border-radius: 5% 5% 0 0;
-    
+    box-shadow: 3px -3px 20px 1px rgba(219, 160, 118, 1);
 }
-.card h4{
+.hot .card h4{
     padding-top: 10px;
     color: rgba(163, 183, 188, 1);
     text-align: center;
@@ -252,17 +254,24 @@ h2{
     opacity: .4;
 }
 h3{
+    /* border: 1px solid red; */
     position: relative;
     font-size: 40px;
     color: rgba(163, 183, 188, 1);
     text-align: center;
+    display: inline-block;
+    left:50%;
+    transform: translateX(-50%);
 }
 h3 .textbg{
     position: absolute;
-    width: 10%;
+    width: 25%;
     z-index: -10;
-    top: -10px;
-    left: 120px;
+    top: -30%;
+    left: -5%;
+}
+.selection .card{
+    padding-top: 50px;
 }
 .selection .card .row div img{
     vertical-align: top;
@@ -323,6 +332,11 @@ footer p{
     padding-top: 10px;
 }
 
+
+
+@media screen and (min-width: 1200px){
+    
+}
 
 
 
