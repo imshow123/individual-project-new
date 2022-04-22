@@ -4,6 +4,7 @@ html{
     scroll-behavior: smooth;
 }
 .container{
+    /* border: 1px solid #000; */
     width: 100%;
     margin: auto;
 }
@@ -11,7 +12,7 @@ img{
     width: 100%;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
 /* 漢堡 */
     #hb{
         width: 40px;
@@ -132,6 +133,9 @@ img{
     }
 
     /* 產品類別 */
+    .product .large{
+        display: none;
+    }
     .product{
         /* border: 1px solid red; */
         padding-top: 150px;
@@ -145,7 +149,7 @@ img{
         left: 20px;
         opacity: .4;
     }
-    .product .container{
+    .product .item-group{
         /* border: 1px solid red; */
         display: flex;
         justify-content: space-between;
@@ -165,7 +169,7 @@ img{
         height: 100%;
         object-fit: cover;
     }
-    .product .container :nth-of-type(2){
+    .product .item-group :nth-of-type(2){
         /* border: 3px solid #000; */
         /* margin-top: -50px; */
         transform: translateY(-50px);
@@ -187,12 +191,14 @@ img{
 
 /* 人氣熱賣 */
 .hot{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .banner{
-    /* border: 1px solid #000; */
+    /* border: 1px solid red; */
     position: relative;
-    vertical-align: bottom;
+    /* aspect-ratio: .7/.5; */
+    /* overflow: hidden; */
+    /* vertical-align: bottom; */
 }
 .totop{
     /* border: 1px solid red; */
@@ -208,14 +214,17 @@ img{
     z-index: 10;
     text-decoration: none;
 }
-.banner .pic img{
+.hot .banner img{
     /* border: 1px solid rgb(255, 0, 0); */
     vertical-align: top;
+    /* height: 100px; */
+    object-fit: cover;
 }
 h2{
     font-size: 40px;
     background-color: rgb(83, 113, 147, .7);
     text-align: center;
+    /* height: 30%; */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -248,7 +257,7 @@ h2{
     position: relative;
 }
 .selection .bg{
-    width: 30%;
+    width: 20%;
     z-index: -10;
     position: absolute;
     top: 15px;
@@ -281,6 +290,8 @@ h3 .textbg{
 .selection .item-group{
     position: relative;
     overflow: hidden;
+    border-radius: 10%;
+    cursor: pointer;
 }
 .selection .item-text{
     position: absolute;
@@ -335,10 +346,13 @@ footer p{
 }
 
 
-
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 992px){
+    .bg{
+        width: 20%;
+    }
+    /* 電腦選單 */
     .container{
-        width: 12oopx;
+        width: 1200px;
         /* margin: auto; */
     }
     input{
@@ -410,15 +424,316 @@ footer p{
         margin-right: 10px;
     }
     .banner{
-        padding-top: 150px;
-        width: 80%;
+        padding-top: 130px;
+        width: 100%;
+        aspect-ratio: 2/1;
+        /* overflow: hidden; */
+    }
+    .banner .video{
+        position: relative;
+        /* animation: slider 2s 3; */
+        /* width: 6000px; */
+    }
+    .banner .video li{
+        height: 100%;
+        /* float: left; */
+        /* display: flex; */
     }
     .totop{
         display: none;
     }
 
-   
+    /* 電腦產品類別 */
+    .product{
+        /* border: 1px solid red; */
+        padding-top: 150px;
+        position: relative;
+    }
+    .product .bg{
+        z-index: -10;
+        position: absolute;
+        transform: translateX(20%);
+        transform: translateY(-5%);
+        opacity: .4;
+    }
+    .display{
+        display: flex;
+    }
+    .product .display .item-group{
+        width: 50%;
+        transform: translateX(20%);
+    }
+    .product .display .large{
+        /* border: 1px solid red; */
+        width: 50%;
+        border-radius: 10% ;
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 13% 100%, 13% 39%, 0 35%, 13% 26%);
+        overflow: hidden;
+        aspect-ratio: .7/.5;
+        transform: translateX(-20%);
+    }
+    .product .display .large img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product .card{
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .product .display .item-group .card:nth-of-type(1){
+        /* border: 1px solid red; */
+        transform: translateX(100%);
+    }
+    .product .display .item-group .card:nth-of-type(3){
+        /* border: 1px solid red; */
+        transform: translateX(100%);
+    }
+    .product .card img{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product .card p{
+        /* border: 1px solid red; */
+        font-size: 26px;
+        text-align: center;
+        color: rgba(163, 183, 188, 1);
+        background-color: rgba(83, 113, 147, .7);
+        line-height:30px;
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+        object-fit: cover;
+        transition: bottom 1s;
+    }
+    .product .card a:hover > p{
+        bottom: 0;
+        transition: bottom 1s;
+    }
 
+    /* 頁尾 */
+    .social-media{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* width: 50%; */
+    }
+    footer .social-media div{
+        /* border: 1px solid rgb(150, 125, 125); */
+        width: 5%;
+        /* aspect-ratio: .5 / .5; */
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .social-media img{
+        /* border: 1px solid #000; */
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .bg{
+        width: 20%;
+    }
+    /* 電腦選單 */
+    .container{
+        width: 1200px;
+        /* margin: auto; */
+    }
+    input{
+        display: none;
+    }
+    #hb{
+        display: none;
+    }
+    .main-header{
+        /* border:5px solid rgb(15, 148, 155); */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(rgba(219, 160, 118, 1) , rgba(239, 235, 229, .3));
+        height: 100px;
+        position: fixed;
+         z-index: 10; /*不設定會被蓋住 */
+    }
+    nav{
+        /* border: 1px solid red; */
+        transform: translateY(30px);
+        padding: 0 20px;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav li{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        height: 70px;
+        /* line-height: 50px; */
+    }
+    nav li:hover>a{
+        background-color: rgba(239, 235, 229, 1);
+        color: rgba(219, 160, 118, 1);
+        border-radius: 50%;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    nav li a{
+        color: rgba(239, 235, 229, 1);
+        text-decoration: none;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    nav .icon{
+        width: 20%;
+    }
+    nav li:hover>.icon{
+        width: 25%;
+    }
+    .logo{
+        /* border: 4px solid rgb(39, 176, 30); */
+        width: 50%;
+        transform: translateY(10px);
+    }
+    .service{
+        /* border: 2px solid red; */
+        transform: translateY(10px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .service div{
+        /* border: 1px solid #000; */
+        width: 25px;
+        margin-right: 15px;
+    }
+    .banner{
+        padding-top: 130px;
+        width: 100%;
+        /* aspect-ratio: 2/1; */
+        /* overflow: hidden; */
+    }
+    .banner .video{
+        position: relative;
+        /* animation: slider 2s 3; */
+        /* width: 6000px; */
+    }
+    .banner .video li{
+        height: 100%;
+        list-style: none;
+        /* float: left; */
+        /* display: flex; */
+    }
+    .totop{
+        display: none;
+    }
+
+    /* 電腦-產品類別 */
+    .product{
+        /* border: 1px solid red; */
+        padding-top: 150px;
+        position: relative;
+    }
+    .product .bg{
+        /* border: 1px solid red; */
+        z-index: -10;
+        position: absolute;
+        transform: translateX(20%);
+        transform: translateY(-20%);
+        opacity: .4;
+    }
+    .display{
+        display: flex;
+    }
+    .product .display .item-group{
+        width: 50%;
+        transform: translateX(20%);
+    }
+    .product .display .large{
+        /* border: 1px solid red; */
+        width: 50%;
+        border-radius: 10% ;
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 13% 100%, 13% 39%, 0 35%, 13% 26%);
+        overflow: hidden;
+        aspect-ratio: .7/.5;
+        transform: translateX(-20%);
+    }
+    .product .display .large img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product .card{
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .product .display .item-group .card:nth-of-type(1){
+        /* border: 1px solid red; */
+        transform: translateX(100%);
+    }
+    .product .display .item-group .card:nth-of-type(3){
+        /* border: 1px solid red; */
+        transform: translateX(100%);
+    }
+    .product .card img{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product .card p{
+        /* border: 1px solid red; */
+        font-size: 26px;
+        text-align: center;
+        color: rgba(163, 183, 188, 1);
+        background-color: rgba(83, 113, 147, .7);
+        line-height:30px;
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+        object-fit: cover;
+        transition: bottom 1s;
+    }
+    .product .card a:hover > p{
+        bottom: 0;
+        transition: bottom 1s;
+    }
+
+    /*頁尾*/
+    .social-media{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* width: 50%; */
+    }
+    footer .social-media div{
+        /* border: 1px solid rgb(150, 125, 125); */
+        width: 5%;
+        /* aspect-ratio: .5 / .5; */
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .social-media img{
+        /* border: 1px solid #000; */
+        height: 100%;
+        object-fit: cover;
+    }
+    
+
+    
 
 
 

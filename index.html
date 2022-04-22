@@ -9,98 +9,112 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./index.css">
     <script src="./JS.js"></script>
+    <script src="./jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="./grid.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
     <header>
-        <div class="container">
-            <section class="main-header">
-                <label  for="menu-switch" id="hb">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                <h1 class="logo">
-                    <a href="">
-                        <div>
-                            <img src="./pics/logo/LOGO(transparent).png" alt="Lockdown Sweets">
+        <section class="main-header">
+            <label  for="menu-switch" id="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <h1 class="logo">
+                <a href="">
+                    <div>
+                        <img src="./pics/logo/LOGO(transparent).png" alt="Lockdown Sweets">
+                    </div>
+                </a>
+            </h1>
+            <nav id="hbMenu" class="hidden">
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <img src="./pics/icon/eggs.png" alt="">
                         </div>
-                    </a>
-                </h1>
-                <nav id="hbMenu" class="hidden">
-                    <ul>
-                        <li>
-                            <div class="icon">
-                                <img src="./pics/icon/eggs.png" alt="">
-                            </div>
-                            <a href="">甜點介紹</a>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="./pics/icon/cheese.png" alt="">
-                            </div>
-                            <a href="">認識我們</a>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="./pics/icon/bake.png" alt="">
-                            </div>
-                            <a href="">最新消息</a>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="./pics/icon/cheesecake.png" alt="">
-                            </div>
-                            <a href="">常見問題</a>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <img src="./pics/icon/cheesecakecut.png" alt="">
-                            </div>
-                            <a href="">聯絡我們</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="service">
-                    <div class="search">
-                        <img src="./pics/icon/search.png" alt="">
-                    </div>
-                    <div>
-                        <img src="./pics/icon/member.png" alt="">
-                    </div>
-                    <div>
-                        <img src="./pics/icon/shopping-cart.png" alt="">
-                    </div>
+                        <a href="">甜點介紹</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="./pics/icon/cheese.png" alt="">
+                        </div>
+                        <a href="">認識我們</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="./pics/icon/bake.png" alt="">
+                        </div>
+                        <a href="">最新消息</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="./pics/icon/cheesecake.png" alt="">
+                        </div>
+                        <a href="">常見問題</a>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="./pics/icon/cheesecakecut.png" alt="">
+                        </div>
+                        <a href="">聯絡我們</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="service">
+                <div>
+                    <img src="./pics/icon/search.png" alt="">
                 </div>
-            </section>
+                <div>
+                    <img src="./pics/icon/member.png" alt="">
+                </div>
+                <div>
+                    <img src="./pics/icon/shopping-cart.png" alt="">
+                </div>
+            </div>
+        </section>
+        <div class="container">    
             <div class="banner">
-                <img src="./pics/banner/banner01.jpg" alt="">
+                <div class="video">
+                    <!-- <li><img src="./pics/banner/banner01.jpg" alt=""></li> -->
+                    <!-- <li><img src="./pics/banner/banner03.jpg" alt=""></li> -->
+                    <!-- <li><img src="./pics/banner/banner04.jpg" alt=""></li> -->
+                    <li><img src="./pics/banner/banner05.jpg" alt=""></li>
+                    <!-- <li><img src="./pics/banner/banner06.jpg" alt=""></li> -->
+                </div>
             </div>
         </div>
     </header>
     <section class="product">
-        <div class="bg">
-            <img src="./pics/logo/background3.png" alt="">
-        </div>
         <div class="container">
-            <div class="card">
-                <a href="" class="item-pic">
-                    <img src="./pics/rollcake/r03.jpg" alt="">
-                    <p>長條<br>蛋糕</p>
-                </a>
+            <div class="bg">
+                <img src="./pics/logo/background3.png" alt="">
             </div>
-            <div class="card">
-                <a href="" class="item-pic">
-                    <img src="./pics/birthdaycake/b07.jpg" alt="">
-                    <p>生日<br>蛋糕</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="" class="item-pic">
-                    <img src="./pics/cheesecake/c03.jpg" alt="">
-                    <p>起司<br>蛋糕</p>
-                </a>
+            <div class="display">
+                <div class="item-group">
+                    <div class="card">
+                        <a href="" class="item-pic">
+                            <img src="./pics/rollcake/r03.jpg" alt="">
+                            <p>長條<br>蛋糕</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="" class="item-pic">
+                            <img src="./pics/birthdaycake/b07.jpg" alt="">
+                            <p>生日<br>蛋糕</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="" class="item-pic">
+                            <img src="./pics/cheesecake/c03.jpg" alt="">
+                            <p>起司<br>蛋糕</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="large">
+                    <img id="large" src="./pics/rollcake/r03.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -111,35 +125,33 @@
         </a>
         <div class="container">
             <div class="banner">
-                <div class="pic">
-                    <img src="./pics/banner/banner02.jpg" alt="">
-                </div>
+                <img src="./pics/banner/banner02.jpg" alt="">
                 <h2>人氣熱賣</h2>
             </div>
             <div class="card">
                 <div class="row">
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/birthdaycake/b09.webp" alt="">
+                        <img src="./pics/birthdaycake/b09.webp" onmouseover="this.src='./pics/birthdaycake/b09-1.webp';" onmouseout="this.src='./pics/birthdaycake/b09.webp';" alt="">
                         <h4>伯爵芋泥布丁戚風<br>NT 1400</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/birthdaycake/b15.webp" alt="">
+                        <img src="./pics/birthdaycake/b15.webp" onmouseover="this.src='./pics/birthdaycake/b15-1.webp';" onmouseout="this.src='./pics/birthdaycake/b15.webp';" alt="">
                         <h4>法式水果千層蛋糕<br> NT 1680</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/rollcake/r11.webp" alt="">
+                        <img src="./pics/rollcake/r10.webp" onmouseover="this.src='./pics/rollcake/r10-1.webp';" onmouseout="this.src='./pics/rollcake/r10.webp';" alt="">
                         <h4>葡萄柚伯爵茶生乳捲<br>NT 640</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/rollcake/r15.webp" alt="">
+                        <img src="./pics/rollcake/r12.webp" onmouseover="this.src='./pics/rollcake/r12-1.webp';" onmouseout="this.src='./pics/rollcake/r12.webp';" alt="">
                         <h4>提拉米蘇生乳捲<br>NT 640</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/cheesecake/c01.jpg" alt="">
+                        <img src="./pics/cheesecake/c01.jpg" onmouseover="this.src='./pics/cheesecake/c01-1.jpg';" onmouseout="this.src='./pics/cheesecake/c01.jpg';" alt="">
                         <h4>酒漬櫻桃巴斯克<br>NT 750</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                        <img src="./pics/cheesecake/c02.jpg" alt="">
+                        <img src="./pics/cheesecake/c02.jpg" onmouseover="this.src='./pics/cheesecake/c02-1.jpg';" onmouseout="this.src='./pics/cheesecake/c02.jpg';" alt="">
                         <h4>黑巧巴斯克<br>NT 750</h4>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 col-xl-3">
@@ -155,10 +167,10 @@
         </div>
     </section>
     <section class="selection">
-        <div class="bg">
-            <img src="./pics/logo/background3.png" alt="">
-        </div>
-        <div class="container">
+        <div class="container"></div>
+            <div class="bg">
+                <img src="./pics/logo/background3.png" alt="">
+            </div>
             <h3>
                 <div class="textbg">
                     <img src="./pics/logo/text-bg.png" alt="">
@@ -174,7 +186,7 @@
                             </section>
                             <section class="item-text">
                                 <h5>上班團購精選</h5>
-                                <p>上班好厭世?超夯團購小點心陪您渡過上班時間!</p>
+                                <p>上班好厭世?超夯團購小點心<br>陪您渡過上班時間!</p>
                             </section>
                         </article>
                     </div>
@@ -185,7 +197,7 @@
                             </section>
                             <section class="item-text">
                                 <h5>生日蛋糕精選</h5>
-                                <p>家人朋友生日，宅配零時差送達讓你好有面子!</p>
+                                <p>家人朋友生日，宅配零時差送達<br>讓你好有面子!</p>
                             </section>
                         </article>
                     </div>
@@ -196,7 +208,7 @@
                             </section>
                             <section class="item-text">
                                 <h5>送禮自用精選</h5>
-                                <p>還在煩惱年節要送什麼嗎?瘋成禮盒送禮自用兩相宜!</p>
+                                <p>還在煩惱年節要送什麼嗎?<br>瘋成禮盒送禮自用兩相宜!</p>
                             </section>
                         </article>
                     </div>
