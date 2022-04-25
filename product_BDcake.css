@@ -1,0 +1,555 @@
+html{
+    background-color: rgba(239, 235, 229, 1);
+    scroll-behavior: smooth;
+}
+.container{
+    /* border: 1px solid #000; */
+    width: 100%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+.totop{
+    /* border: 1px solid red; */
+    width: 10%;
+    color: rgb(182, 181, 181);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(239, 235, 229, 1);
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    text-decoration: none;
+}
+/* 大圖標 */
+.banner{
+    position: relative;
+}
+.banner img{
+    vertical-align: top;
+}
+h2{
+    font-size: 40px;
+    background-color: rgb(83, 113, 147, .7);
+    text-align: center;
+    /* height: 30%; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    color: rgba(163, 183, 188, 1);
+}
+
+/* 選單 */
+.productType .bg{
+    /* border: 1px solid red; */
+    width: 30%;
+    z-index: -10;
+    position: absolute;
+    top: 400px;
+    /* transform: translateY(300px);  跟X一起就沒作用*/
+    transform: translateX(270px);
+    opacity: .4;
+}        
+.productType ul{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: rgba(198, 182, 169, 1); */
+
+}
+.productType ul a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 10px;
+    cursor: pointer;
+    color: rgba(239, 235, 229, 1);
+    background-color: rgba(198, 182, 169, 1);
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin: 10px 10px;
+}
+.productType ul a:hover{
+    color: rgba(219, 160, 118, 1);
+    background-color: rgba(239, 235, 229, 1);
+}
+
+/* 產品欄 */
+.BDcake{
+    padding-top: 100px;
+}
+h3{
+    /* border: 1px solid red; */
+    position: relative;
+    font-size: 36px;
+    color: rgba(163, 183, 188, 1);
+    text-align: center;
+    display: inline-block;
+    left:50%;
+    transform: translateX(-50%);
+}
+h3 .textbg{
+    position: absolute;
+    width: 20%;
+    z-index: -10;
+    top: -35%;
+    left: -5%;
+}
+.BDcake .container{
+    padding-top: 50px;
+}
+.BDcake .container .row div:hover{
+    cursor: pointer;
+    
+}    
+.BDcake .container img{
+    border-radius: 5% 5% 0 0;
+    /* box-shadow: 3px -3px 20px 1px rgba(219, 160, 118, 1); */
+}
+.BDcake .container img:hover{
+    box-shadow: 3px -3px 20px 1px rgba(219, 160, 118, 1);
+}
+.BDcake h4{
+    padding-top: 10px;
+    color: rgba(163, 183, 188, 1);
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -3px;
+    border-radius: 0 0 100% 100%;
+    background-color: rgba(83, 113, 147, .8);
+    line-height: 20px;
+}
+/* 頁尾 */
+footer{
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(219, 160, 118, 1);
+    text-align: center;
+}
+footer .social-media{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+footer .social-media div{
+    width: 10%;
+    margin: 0 10px;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+    font-size: 18px;
+}
+footer p{
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 992px){
+/* 漢堡 */
+    #hb{
+        width: 40px;
+        height: 40px;
+        background-color: rgba(198, 182, 169, 1);
+        position: relative;
+        border-radius: 5px;
+    }
+    #hb span{
+        width: 35px;
+        height: 2px;
+        background-color: rgba(239, 235, 229, 1);
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    #hb :first-child{
+        top: 10px;
+    }
+    #hb :nth-child(2){
+        top: 0;
+        bottom: 0;
+    }
+    #hb :last-child{
+        bottom: 10px;
+    }
+    #menu-switch:checked ~ header #hb :first-child{
+        transform: rotate(45deg);
+        transition: top .3s, transform .3s .3s;
+        top: 0;
+        bottom: 0;
+    }
+    #menu-switch:checked ~ header #hb :nth-child(2){
+        display: none;
+    }
+    #menu-switch:checked ~ header #hb :last-child{
+        transform: rotate(135deg);
+        transition: bottom .3s,transform .3s .3s;
+        top: 0;
+        bottom: 0;
+    }
+    #menu-switch{
+        display: none;
+    }
+
+    /* 選單 */
+    .main-header{
+        /* border:5px solid rgb(15, 148, 155); */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(rgba(219, 160, 118, 1),rgba(239, 235, 229, 1));
+        /* position: relative; */
+        height: 60px;
+        align-items: flex-start
+        /* z-index: 10; */
+    }
+    nav{
+        /* border: 1px solid red; */
+        background-color: rgba(198, 182, 169, 1);
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: fixed;
+        padding-top: 50px;
+        transition: left 1s;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+    }
+    .hidden{
+        left: -100%;
+        transition: left 1s;
+    }
+    nav li a{
+        color: rgba(239, 235, 229, 1);
+        text-decoration: none;
+        padding-left: 10px;
+    }
+    nav li{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        padding-bottom: 50px;
+    }
+    nav .icon{
+        width: 10%;
+    }
+    .logo{
+        /* border: 4px solid rgb(39, 176, 30); */
+        position: absolute;
+        width: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .service{
+        /* border: 2px solid red; */
+        display: flex;
+        /* width: 80%; */
+        /* width: 100%; */
+        padding-left: 40px;
+        /* justify-content: space-between; */
+        /* position: absolute; */
+        right:0;
+        /* top:50%;
+        transform: translateY(-50%); */
+    }
+    .service div{
+        /* border: 1px solid #000; */
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    /* 背景LOGO */
+    .BDcake{
+        /* border: 1px solid red; */
+        position: relative;
+    }
+    .BDcake .bg{
+        /* border: 1px solid red; */
+        width: 30%;
+        /* z-index: -10; */
+        position: absolute;
+        top: -30px;
+        /* transform: translateY(-200px); */
+        transform: translateX(250px);
+        opacity: .4;
+    }
+    /*頁尾*/
+    .social-media{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* width: 50%; */
+    }
+    footer .social-media div{
+        /* border: 1px solid rgb(150, 125, 125); */
+        width: 5%;
+        /* aspect-ratio: .5 / .5; */
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .social-media img{
+        /* border: 1px solid #000; */
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .bg{
+        width: 20%;
+    }
+    /* 電腦選單 */
+    .container{
+        width: 1200px;
+        /* margin: auto; */
+    }
+    input{
+        display: none;
+    }
+    #hb{
+        display: none;
+    }
+    .main-header{
+        /* border:5px solid rgb(15, 148, 155); */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(rgba(219, 160, 118, 1) , rgba(239, 235, 229, .3));
+        height: 100px;
+        /* position: fixed; */
+         z-index: 10; /*不設定會被蓋住 */
+    }
+    nav{
+        /* border: 1px solid red; */
+        transform: translateY(30px);
+        padding: 0 20px;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav li{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        height: 70px;
+        /* line-height: 50px; */
+    }
+    nav li:hover>a{
+        background-color: rgba(239, 235, 229, 1);
+        color: rgba(219, 160, 118, 1);
+        border-radius: 50%;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    nav li a{
+        color: rgba(239, 235, 229, 1);
+        text-decoration: none;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    nav .icon{
+        width: 20%;
+    }
+    nav li:hover>.icon{
+        width: 25%;
+    }
+    .logo{
+        /* border: 4px solid rgb(39, 176, 30); */
+        width: 50%;
+        transform: translateY(10px);
+    }
+    .service{
+        /* border: 2px solid red; */
+        transform: translateY(10px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .service div{
+        /* border: 1px solid #000; */
+        width: 25px;
+        margin-right: 15px;
+    }
+    /*頁尾*/
+    .social-media{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* width: 50%; */
+    }
+    footer .social-media div{
+        /* border: 1px solid rgb(150, 125, 125); */
+        width: 5%;
+        /* aspect-ratio: .5 / .5; */
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .social-media img{
+        /* border: 1px solid #000; */
+        height: 100%;
+        object-fit: cover;
+    }
+    .totop{
+        /* border: 1px solid red; */
+        width: 3%;
+        color: rgb(182, 181, 181);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(239, 235, 229, 1);
+        border-radius: 100%;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    /* 電腦選單 */
+    .container{
+        width: 1200px;
+        /* margin: auto; */
+    }
+    input{
+        display: none;
+    }
+    #hb{
+        display: none;
+    }
+    .main-header{
+        /* border:5px solid rgb(15, 148, 155); */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(rgba(219, 160, 118, 1) , rgba(239, 235, 229, .3));
+        height: 100px;
+        /* position: fixed; */
+         z-index: 10; /*不設定會被蓋住 */
+    }
+    nav{
+        /* border: 1px solid red; */
+        transform: translateY(30px);
+        padding: 0 20px;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav li{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        height: 70px;
+        /* line-height: 50px; */
+    }
+    nav li:hover>a{
+        background-color: rgba(239, 235, 229, 1);
+        color: rgba(219, 160, 118, 1);
+        border-radius: 50%;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    nav li a{
+        color: rgba(239, 235, 229, 1);
+        text-decoration: none;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    nav .icon{
+        width: 20%;
+    }
+    nav li:hover>.icon{
+        width: 25%;
+    }
+    .logo{
+        /* border: 4px solid rgb(39, 176, 30); */
+        width: 50%;
+        transform: translateY(10px);
+    }
+    .service{
+        /* border: 2px solid red; */
+        transform: translateY(10px);
+        display: flex;
+        justify-content: space-between;
+    }
+    .service div{
+        /* border: 1px solid #000; */
+        width: 25px;
+        margin-right: 15px;
+    }
+
+    /* 大圖 */
+    .banner{
+        /* position: relative; */
+        padding-top: 30px;
+        /* display: none; */
+    }
+
+    /* 背景LOGO */
+    .BDcake{
+        /* border: 1px solid red; */
+        position: relative;
+    }
+    .BDcake .bg{
+        /* border: 1px solid red; */
+        width: 20%;
+        /* z-index: -10; */
+        position: absolute;
+        top: -50px;
+        /* transform: translateY(-200px); */
+        transform: translateX(850px);
+        opacity: .4;
+    }
+
+    /*頁尾*/
+    .social-media{
+        /* border: 1px solid red; */
+        width: 100%;
+        /* width: 50%; */
+    }
+    footer .social-media div{
+        /* border: 1px solid rgb(150, 125, 125); */
+        width: 5%;
+        /* aspect-ratio: .5 / .5; */
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .social-media img{
+        /* border: 1px solid #000; */
+        height: 100%;
+        object-fit: cover;
+    }
+    .totop{
+        /* border: 1px solid red; */
+        width: 3%;
+        color: rgb(182, 181, 181);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(239, 235, 229, 1);
+        border-radius: 100%;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+        text-decoration: none;
+    }
+    
+}

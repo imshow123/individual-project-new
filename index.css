@@ -203,6 +203,7 @@ img{
 .totop{
     /* border: 1px solid red; */
     width: 10%;
+    color: rgb(182, 181, 181);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,6 +235,9 @@ h2{
 }
 .hot .card{
     padding-top: 50px;
+}
+.hot .card .row div:hover{
+    cursor: pointer;
 }
 .hot .card img{
     border-radius: 5% 5% 0 0;
@@ -517,6 +521,7 @@ footer p{
         bottom: 0;
         transition: bottom 1s;
     }
+    
 
     /* 頁尾 */
     .social-media{
