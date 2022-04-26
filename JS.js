@@ -30,13 +30,13 @@ function init(){
 window.addEventListener('load', init, false);
 
 
-$(function (adVideo) {
-    let divWidth = $('.banner').width();
-    let imgCount = $('.video li').length();
-    $('.video').width(divWidth * imgCount);
-    $('.video li').width(divWidth);   
-    $('.video').animate({
-        left: divWidth * imgCount[i] * -1,
-    });
-});
-setInterval(adVideo,3000);
+// $(function (adVideo) {
+//     let divWidth = $('.banner').width();
+//     let imgCount = $('.video li').length();
+//     $('.video').width(divWidth * imgCount);
+//     $('.video li').width(divWidth);   
+//     $('.video').animate({
+//         left: divWidth * imgCount[i] * -1,
+//     });
+// });
+// setInterval(adVideo,3000);
