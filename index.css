@@ -131,6 +131,9 @@ img{
     .banner{
         padding-top: 60px;
     }
+    .banner .video li{
+        list-style: none;
+    }
 
     /* 產品類別 */
     .product .large{
